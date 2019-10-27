@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 export default function(props) {
     return (
         <Container>
@@ -35,6 +36,9 @@ export default function(props) {
                         minima perspiciatis molestias beatae dolor, expedita laborum, deleniti ad reprehenderit suscipit
                         perferendis optio quidem accusantium soluta ex.
                     </span>
+                    <button>
+                        <Link to="/feedback">Feedback Me</Link>
+                    </button>
                 </AboutMeContainer>
             </AboutContainer>
         </Container>
@@ -68,7 +72,7 @@ const MyNameContainer = styled.div`
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    padding-top: 15px;
+    padding: 15px 0px;
     > span:nth-child(1) {
         font-size: 2.5em;
         color: #fff;
@@ -76,7 +80,7 @@ const MyNameContainer = styled.div`
     }
     > span:nth-child(2) {
         font-size: 1em;
-        color: #9fa8b2;
+        color: #a8a7a2;
         font-family: 'Josefin Sans';
     }
 `
@@ -101,7 +105,7 @@ const AboutContainer = styled.div`
 
 const IconsContainer = styled.div`
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
     justify-content: center;
     align-items: center;
     > a {
@@ -118,13 +122,31 @@ const IconsContainer = styled.div`
 
 const AboutMeContainer = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 40px;
     > span {
         text-align: center;
         width: 50%;
         font-size: 1.3em;
         font-family: 'Josefin Sans';
+    }
+    > button {
+        margin: 30px 0px;
+        height: 40px;
+        width: 150px;
+        background-color: #262425;
+        border: 1px solid #262425;
+        border-radius: 3px;
+        > a {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1em;
+            text-decoration: none;
+        }
     }
 `
