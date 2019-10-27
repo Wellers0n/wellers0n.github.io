@@ -16,11 +16,26 @@ export default function(props) {
             </ContainerHeader>
             <AboutContainer>
                 <IconsContainer>
-                    <FontAwesomeIcon className="icon" icon={faTwitter}/>
-                    <FontAwesomeIcon className="icon" icon={faGithub}/>
-                    <FontAwesomeIcon className="icon" icon={faMedium}/>
-                    <FontAwesomeIcon className="icon" icon={faLinkedin}/>
+                    <a href="">
+                        <FontAwesomeIcon className="icon" icon={faTwitter} />
+                    </a>
+                    <a href="">
+                        <FontAwesomeIcon className="icon" icon={faGithub} />
+                    </a>
+                    <a href="">
+                        <FontAwesomeIcon className="icon" icon={faMedium} />
+                    </a>
+                    <a href="">
+                        <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                    </a>
                 </IconsContainer>
+                <AboutMeContainer>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, distinctio iste? Hic vero
+                        minima perspiciatis molestias beatae dolor, expedita laborum, deleniti ad reprehenderit suscipit
+                        perferendis optio quidem accusantium soluta ex.
+                    </span>
+                </AboutMeContainer>
             </AboutContainer>
         </Container>
     )
@@ -53,16 +68,16 @@ const MyNameContainer = styled.div`
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 15px;
     > span:nth-child(1) {
         font-size: 2.5em;
         color: #fff;
-        font-family: 'Oswald';
+        font-family: 'Josefin Sans';
     }
     > span:nth-child(2) {
         font-size: 1em;
         color: #9fa8b2;
-        font-family: 'Oswald';
+        font-family: 'Josefin Sans';
     }
 `
 
@@ -79,7 +94,7 @@ const ImgContainer = styled.div`
     }
 `
 const AboutContainer = styled.div`
-    background: blanchedalmond;
+    background: #fff;
     flex: 2;
     padding-top: 70px;
 `
@@ -89,12 +104,27 @@ const IconsContainer = styled.div`
     padding-top: 20px;
     justify-content: center;
     align-items: center;
+    > a {
+        color: #262425;
+        margin-right: 15px;
+    }
+    > a:nth-child(4) {
+        margin-right: 0px;
+    }
     .icon {
         font-size: 2.2em;
-        margin-right: 15px;
-    };
-    .icon:nth-child(4) {
-        margin-right: 0%;
     }
-    
+`
+
+const AboutMeContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    > span {
+        text-align: center;
+        width: 50%;
+        font-size: 1.3em;
+        font-family: 'Josefin Sans';
+    }
 `
