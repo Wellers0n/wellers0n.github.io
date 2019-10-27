@@ -1,0 +1,55 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "classes": true
+      }
+    },
+    "settings": {
+      "react": {
+        "createClass": "createReactClass",
+        "pragma": "React",
+        "version": "16.6"
+      }
+    },
+    "plugins": [
+      "react",
+      "prettier",
+      "react-hooks",
+      "@typescript-eslint"
+
+    ],
+    "rules": {
+      "no-return-assign": "off",
+      "next-line space-infix-ops": "off",
+      "eqeqeq": [
+          "warn",
+          "smart"
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "curly": [
+          "warn",
+          "multi-line",
+          "consistent"
+      ],
+      "newline-before-return": "warn",
+      "prettier/prettier": "warn"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ]
+  }
