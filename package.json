@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "deploy": "gh-pages -d dist",
+    "build": "gh-pages -d dist",
     "start": "wp --config ./webpack.config",
     "test": "jest --coverage",
     "ts:check": "tsc"
